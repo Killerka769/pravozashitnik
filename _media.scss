@@ -1,0 +1,47 @@
+@media screen and (max-width: 1024px) {
+  header {
+
+    .main_navigation {
+      .container {
+        .burger {
+          display: flex;  // Показываем бургер-меню на мобильных
+          }
+      }
+    }
+
+    background-position-x: center;  // Центрируем по горизонтали фон
+
+    .main_menu > .main_navigation > .container > .navigation, nav {
+      display: none;  // Скрываем навигацию на экранах шириной меньше 1024px
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    background-position: center calc(100% + 25px);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .top_menu { 
+    .container {
+      .email {
+        img, p {
+          display: none;  // Скрываем изображения и текст email
+        }
+      }
+    }
+  }
+
+  .main_navigation {
+    .container {
+      .burger {
+        display: flex;  // Показываем бургер-меню на мобильных
+        }
+      .navigation {
+        display: none;  // Скрываем меню по умолчанию
+      }
+    }
+  }
+}

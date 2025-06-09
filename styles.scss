@@ -1,0 +1,2207 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+@import "media";
+*,html,body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+#wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+}
+header {
+    height: 82vh;
+    width: 100%;
+    background-image: url('./fon.jpeg');
+    background-position: center calc(100% + 25px); /* Центрируем по горизонтали и сдвигаем вниз на 25px */
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .top_menu {
+        width: 100%;
+        height: 5vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container {
+            display: flex;
+            width: 75%;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            @media screen and (max-width: 1140px) {
+                width: 90%;}
+
+            span {
+                font-family: Nunito Sans;
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: 0%;
+                color: #4F8FF0;
+            }
+
+            .contacts {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                min-width: 60%;
+                word-wrap: break-word;
+                column-gap: 5%;
+
+                .phoneNumber,.email {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+
+                    p {
+                        overflow: hidden;
+                    }
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+                p {
+                    font-family: Nunito Sans;
+                    font-size: 14px;
+                    line-height: 120%;
+                    letter-spacing: 0%;
+
+                }
+            }
+        }
+    }
+
+    .main_menu {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(34, 34, 34, 0.64);
+
+        .containerTextButton {
+            height: 78%;
+            width: 100%;
+            display:flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 6%;
+            position: relative;
+            
+            .icons {
+                width: 75%;
+                height: 8%;
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @media screen and (max-width:800px){
+                    display: none;
+                } 
+
+                .icon {
+                    height: 100%;
+                    width: 20%;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: left;
+                    gap: 10px;
+                    font-size: 24px;
+                    color: white;
+                    span{
+                        height: 40px;
+                        border:3px solid white;
+
+                        &:nth-of-type(1){
+                            border:3px solid rgba(79, 143, 240, 1);
+                        }
+                        &:nth-of-type(2),&:nth-of-type(3){
+                            height:24px;
+                        }
+                    }
+                }
+                .code {
+                    height: 100%;
+                    width: 20%;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    gap: 15px;
+                    font-size: 30px;
+                    color: white;
+                    span{
+                        height: 36px;
+                        transform: rotate(30deg);
+                        border:2px solid white;
+                    }
+                }
+            }
+
+            .text {
+                display:flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                width: 70%;
+
+                h2 {
+                    font-family: Nunito Sans;
+                    font-weight: 300;
+                    font-size: 30px;
+                    line-height: 150%;
+                    letter-spacing: 0%;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 1);
+
+                    @media screen and (max-width:1024px){
+                        font-size:24px;
+                    }
+                    @media screen and (max-width:825px){
+                        font-size:18px;
+                    }
+                    @media screen and (max-width:498px){
+                        font-size: 16px;
+                    } 
+                }
+                h1{
+                    font-family: Nunito Sans;
+                    font-weight: 600;
+                    font-size: 56px;
+                    letter-spacing: 0%;
+                    text-transform: uppercase;
+                    color: rgba(79, 143, 240, 1);
+                    white-space: nowrap;
+ 
+                    @media screen and (max-width:1024px){
+                        font-size:50px;
+                    }
+                    @media screen and (max-width:825px){
+                        font-size:30px;
+                    }
+                    @media screen and (max-width:498px){
+                        font-size: 22px;
+                    }
+                    @media screen and (max-width:498px){
+                        font-size: 20px;
+                    }
+                }
+                p{
+                    font-family: Nunito Sans;
+                    font-weight: 400;
+                    font-size: 20px;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 1);
+                    overflow: hidden;
+
+                    @media screen and (max-width:1024px){
+                        font-size:18px;
+                    }
+                    @media screen and (max-width:825px){
+                        font-size:16px;
+                    } 
+                }
+            }
+        }
+
+        button{
+            width: 158px;
+            height: 49px;
+            top: 20px;
+            left: 20px;
+            gap: 10px;
+            border-width: 2px;
+            padding-top: 16px;
+            padding-right: 24px;
+            padding-bottom: 16px;
+            padding-left: 24px;
+            background-color: rgba(79, 143, 240, 1);
+            border: 2px solid rgba(79, 143, 240, 1);
+            color: white;
+            font-family: Nunito Sans;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &:hover {
+                transition: 0.5s all;
+                background-color: rgba(255, 255, 255, 1);
+                color: rgba(79, 143, 240, 1);
+                border: 2px solid rgba(79, 143, 240, 1);
+            }
+        }
+
+        .main_navigation {
+            width: 100%;
+            height: 10vh;
+            background-color: rgba(1, 1, 1, 0.76);
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+
+            .container {
+                width: 75%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media screen and (max-width: 1200px) {
+                    width: 77%;}
+                @media screen and (max-width: 1140px) {
+                width: 90%;}
+
+                .text {
+                    width: 30%;
+                    display: flex;
+                    flex-flow: column nowrap;
+
+                    h1, p {
+                        margin: 0;
+                        padding: 0;
+                        line-height: 1;
+                        display: inline;
+                        overflow: hidden;
+                      }
+                    h1 {
+                        font-family: Nunito Sans;
+                        font-weight: 900;
+                        font-size: 28px;
+                        letter-spacing: 0%;
+                        text-transform: uppercase;
+                        color: rgba(79, 143, 240, 1);
+                    }
+                    p {
+                        font-family: Nunito Sans;
+                        font-weight: 900;
+                        font-size: 20px;
+                        letter-spacing: 0%;
+                        text-transform: lowercase;
+                        color: white;
+                    }
+                    @media screen and (max-width: 1024px) {
+                        width: 80%; // Ширина 80% при экранах шириной меньше 1024px
+                      }
+                    
+                      // Медиазапрос для экранов меньше 800px
+                      @media screen and (max-width: 800px) {
+                        width: 80%; // Ширина остаётся 80% при экранах меньше 800px
+                        h1 {
+                          font-size: 22px; // Уменьшаем шрифт для заголовка
+                        }
+                        p {
+                          font-size: 16px; // Уменьшаем шрифт для абзаца
+                        }
+                      }
+                }
+
+                .navigation{
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                    width: auto;
+
+                    nav > ul {
+                        list-style-type: none;
+                        display: flex;
+                        column-gap: 15px;
+
+                        li,a {
+                            font-family: Nunito Sans;
+                            font-weight: 700;
+                            font-size: 18px;
+                            letter-spacing: 0%;
+                            text-align: center;
+                            color: white;
+                            text-decoration: none;
+
+                            &:hover{
+                                color: rgba(79, 143, 240, 1);
+                                text-decoration: underline;
+                                text-decoration-color: #4F8FF0;
+                            }
+                        }
+                    }
+                }
+
+                .burger {
+                    padding: 3px;
+                    width: 24px;           // Ширина всего бургер-меню
+                    height: 24px;          // Высота бургер-меню
+                    display: none;         // Для расположения спанов горизонтально
+                    flex-direction: column; // Выстраиваем спаны в колонку
+                    justify-content: space-between; // Разделяем их по высоте
+                    align-items: flex-end;   // Центрируем спаны по горизонтали
+                    cursor: pointer;       // Указатель при наведении
+
+                    span {
+                        display: block;      // Превращаем элементы span в блочные
+                        width: 100%;         // Ширина каждой полоски 100% от контейнера
+                        height: 4px;         // Высота полоски
+                        background-color: white;  // Белый цвет для полосок
+                        border-radius: 2px;  // Округляем углы
+                        margin: 0;           // Убираем маргины, чтобы не было лишнего пространства
+
+                        &:nth-of-type(2) {
+                            width: 60%;
+                        }
+                    }
+                }
+                @media screen and (max-width: 1024px) {
+                    .navigation {
+                      display: none;  /* Скрыть меню навигации на мобильных экранах */
+                    }
+                  
+                    .burger {
+                      display: flex;  /* Показываем кнопку бургера на мобильных экранах */
+                    }
+                  }
+            }
+        }
+    }
+}
+
+.active {
+    transition: 0.4s all;
+    position:fixed;
+    right: -100vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(34, 34, 34, 1);
+    opacity: 0;
+    z-index: 999;
+
+    .container {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: relative;
+
+        nav {
+            position: absolute;
+            left: 0;
+            top: 5%;
+            list-style-type: none;
+            display: flex;
+            column-gap: 11px;
+
+            li {
+                font-family: Nunito Sans;
+                font-weight: 700;
+                font-size: 16px;
+                letter-spacing: 0%;
+                color: white;
+
+                &:hover{
+                    color: rgba(79, 143, 240, 1);
+                    text-decoration: underline;
+                    text-decoration-color: #4F8FF0;
+                }
+            }
+        }
+
+        .close {
+            height: 24px;
+            width: 24px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+
+            span {
+                    display: block;
+                    width: 100%; /* Каждая полоска будет занимать всю ширину контейнера */
+                    height: 3px;  /* Высота полоски */
+                    background-color: white;  /* Белый цвет полосок */
+                    border-radius: 2px;  /* Округляем углы */
+                    transition: all 0.3s ease; /* Плавное изменение при активации крестика */
+
+                    &:nth-of-type(1) {
+                        position: absolute;
+                        top: 0; /* Располагаем первую полоску в верхней части */
+                        transform: rotate(45deg);  /* Первая полоска поворачивается на 45 градусов */
+                        top: 10px; /* Перемещаем первую полоску в центр */
+                      }
+                      
+                      /* Вторая полоска (по центру) */
+                      &:nth-of-type(2) {
+                        position: absolute;
+                        top: 10px; /* Центрируем вторую полоску */
+                        opacity: 1;  /* По умолчанию видимая */
+                        transform: rotate(-45deg); /* Третья полоска поворачивается на -45 градусов */
+                      }
+            }
+        }
+    }
+}
+.close {
+    right: 0;
+    display: flex;
+    opacity: 1;
+}
+
+
+.ourServices {
+    height: 100vh;
+    background-color: rgba(247, 247, 247, 1);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 1071px) {
+        height: 150vh;
+      }
+    
+      // Медиазапрос для экранов меньше 800px
+      @media screen and (max-width: 800px) {
+        height: 90vh;
+      }
+
+    .container{
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2%;
+        @media screen and (max-width: 1071px) {
+            gap: 5%;
+        }
+      
+        @media screen and (max-width: 800px) {
+            gap: 4%;
+        } 
+
+        .mainText {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+    button {
+        width: 138px;
+        height: 49px;
+        gap: 10px;
+        padding-top: 16px;
+        padding-right: 24px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+        background-color: rgba(79, 143, 240, 1);
+        border: 2px solid rgba(79, 143, 240, 1);
+        color: white;
+        font-family: Nunito Sans;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+
+        &:hover {
+            transition: 0.5s all;
+            background-color: rgba(255, 255, 255, 1);
+            color: rgba(79, 143, 240, 1);
+            border: 2px solid rgba(79, 143, 240, 1);
+        }
+    }
+    span {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    
+    h1{
+        font-family: Nunito Sans;
+        font-weight: 800;
+        font-size: 28px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        color: rgba(34, 34, 34, 1);
+
+        @media screen and (max-width: 1071px) {
+            font-size: 24px;
+        }
+      
+        @media screen and (max-width: 800px) {
+            font-size: 20px;
+        }   
+    }
+    div {
+        height: 3px;
+        width: 50px;
+        background-color: rgba(79, 143, 240, 1);
+    }
+    }
+
+    .text {
+        width: 62%;
+        overflow: hidden;
+        text-align: center;
+        font-family: Nunito Sans;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0%;
+        color: rgba(34, 34, 34, 1);
+          @media screen and (max-width: 800px) {
+            font-size: 14px;
+            width: 90%;
+          }
+    }
+
+.containerListServices{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 1071px) {
+        
+      }
+    
+      @media screen and (max-width: 800px) {
+        height: 50%;
+      }
+    .listServices {
+        height: 100%;
+        width: 1050px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        gap:15px;
+        @media screen and (max-width: 1071px) {
+            width: 780px;
+          }
+        
+          // Медиазапрос для экранов меньше 800px
+          @media screen and (max-width: 800px) {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            overflow-x: scroll;
+            width: auto;
+            padding-left: 5%;
+          }
+
+        div {
+            height: calc(96%/2);
+            width: 340px;
+            background-color: white;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            @media screen and (max-width: 1071px) {
+                width: 48%;
+                height: calc(94%/3);
+              }
+            
+              // Медиазапрос для экранов меньше 800px
+              @media screen and (max-width: 800px) {
+                width: 300px;
+                height: 100%;
+              }
+
+            .container {
+            padding: 0 10px;
+            height: 90%;
+            width: 90%;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            position: relative;
+
+            img {
+                height: 35px;
+                width: 35px;
+            }
+            h1 {
+                font-family: Nunito Sans;
+                font-weight: bolder;
+                font-size: 18px;
+                line-height: 150%;
+                letter-spacing: 0%;
+                text-align: center;
+                color: rgba(34, 34, 34, 1);
+            }
+            p {
+                overflow: hidden;
+                font-family: Nunito Sans;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 120%;
+                letter-spacing: 0%;
+                text-align: center;
+                color: rgba(34, 34, 34, 1);
+            }
+            .border {
+              display: none;
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              background-color: transparent;
+              border-style: solid;
+              border-color: rgba(255, 255, 255, 1); /* Белый цвет для бордюра */
+          
+              &:nth-of-type(1) {
+                left: 0;
+                top: 0;
+                border-width: 3px 0 0 3px; /* Верхний и левый бордер */
+              }
+          
+              &:nth-of-type(2) {
+                right: 0;
+                top: 0;
+                border-width: 3px 3px 0 0; /* Верхний и правый бордер */
+              }
+          
+              &:nth-of-type(3) {
+                left: 0;
+                bottom: 0;
+                border-width: 0 0 3px 3px; /* Нижний и левый бордер */
+              }
+          
+              &:nth-of-type(4) {
+                right: 0;
+                bottom: 0;
+                border-width: 0 3px 3px 0; /* Нижний и правый бордер */
+              }
+            }
+          }
+
+          &:hover {
+            background-color: rgba(79, 143, 240, 1);
+          }
+          &:hover > h1,&:hover > p {
+            color: white;
+          }
+          &:hover > .border {
+            display: block;
+        }
+          &:hover > img {
+            filter: invert(1) brightness(100) sepia(1) saturate(100%) hue-rotate(180deg);
+          }
+        }
+        }
+    }
+  } 
+}
+
+.about {
+    height: 550px;  // Пример для экранов шириной 1920px
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @media screen and (max-width: 1150px) {
+        height: 450px;
+    }
+
+    @media screen and (max-width: 1071px) {
+        height: 350px;  // Для экранов до 1071px
+    }
+    @media screen and (max-width: 875px) {
+        height: 380px;  // Для экранов до 800px
+    }
+    @media screen and (max-width: 800px) {
+        height: 400px;  // Для мобильных экранов
+    }
+
+    @media screen and (max-width: 580px) {
+        height: 470px;  // Для экранов до 550px
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 560px;
+    }
+    @media screen and (max-width: 380px) {
+        height: 610px;
+    }
+
+    .container {
+        height: 80%;
+        width: 85%;
+        display: flex;
+        flex-flow: column nowrap;
+        position: relative;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1150px) {
+            height: 90%;  // Для экранов до 1150px
+        }
+
+        @media screen and (max-width: 800px) {
+            height: 90%;  // Для экранов до 800px
+        }
+
+        span {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 2%;
+
+            .heading{
+                display: flex;
+                column-gap: 5px;
+                @media screen and (max-width: 1071px) {
+                    flex-flow: column nowrap;
+                    align-items: flex-start;
+                }
+                
+            h1 {
+                font-family: Nunito Sans;
+                font-weight: 800;
+                font-size: 28px;
+                letter-spacing: 0%;
+                text-transform: uppercase;
+
+                &:nth-of-type(2) {
+                    font-family: Nunito Sans;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                }
+
+                @media screen and (max-width: 1480px) {
+                    font-size: 24px;
+                }
+
+                @media screen and (max-width: 1260px) {
+                    font-size: 22px;
+                }
+
+                @media screen and (max-width: 1150px) {
+                    font-size: 20px;
+                }
+
+                @media screen and (max-width: 1071px) {
+                    font-size: 18px;
+                }
+
+                @media screen and (max-width: 800px) {
+                    font-size: 16px;
+                }
+            }
+        }
+            .line {
+                height: 3px;
+                width: 50px;
+                background-color: rgba(79, 143, 240, 1);
+            }
+
+            div {
+                display: flex;
+            }
+        }
+
+        .img {
+            background-image: url('./book.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            height: 82%;
+            width: 40%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            box-shadow: 4px 4px 12px 2px rgba(33, 33, 33, 0.25);
+
+            @media screen and (max-width: 1071px) {
+                display: none;  // Скрыть картинку на экранах до 1071px
+            }
+        }
+
+        .buttons {
+            height: 15%;
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            gap: 24px;
+            
+            @media screen and (max-width: 800px) {
+                height: 30%;  // Увеличиваем высоту кнопок для экранов до 800px
+            }
+
+            button {
+                transition: 0.3s all;
+                width: 210px;
+                height: 49px;
+                background-color: rgba(79, 143, 240, 1);
+                border: 2px solid rgba(79, 143, 240, 1);
+                font-family: Nunito Sans;
+                font-weight: 900;
+                font-size: 14px;
+                letter-spacing: 0%;
+                text-align: center;
+                text-transform: uppercase;
+                color: white;
+
+                &:hover {
+                    color: black;
+                }
+
+                &:nth-of-type(2) {
+                    width: 161px;
+                    height: 49px;
+                    border-width: 2px;
+                    background-color: rgba(230, 230, 230, 1);
+                    border-color: rgba(230, 230, 230, 1);
+                    color: rgba(34, 34, 34, 1);
+                }
+
+                &:hover {
+                    background-color: white;
+                }
+            }
+
+            @media screen and (max-width: 800px) {
+                align-items: center;
+                justify-content: center;
+                flex-flow: column nowrap;
+                gap: 10px;
+            }
+        }
+
+        .mainText {
+            width: 55%;
+            height: 70%;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 8%;
+            
+            @media screen and (max-width: 1150px) {
+                min-height: 45%;  // Уменьшаем высоту на мобильных
+
+            }
+            @media screen and (max-width: 1071px) {
+                min-height: 50%;  // Уменьшаем высоту на мобильных
+                width: 80%;
+            }
+            @media screen and (max-width: 800px) {
+                height: 70%;  // Уменьшаем высоту на мобильных
+                width: 100%;
+            }
+
+            @media screen and (max-width: 480px) {
+                height: 60%;  // Для самых маленьких экранов
+            }
+
+            @media screen and (max-width: 405px) {
+                height: 85%;
+            }
+
+            p {
+                overflow: hidden;
+                font-family: Nunito Sans;
+                font-weight: 400;
+                font-size: 1rem;
+                letter-spacing: 0%;
+                line-height: 1.5;
+
+                @media screen and (max-width: 1480px) {
+                    font-size: 0.95rem;
+                }
+
+                @media screen and (max-width: 1260px) {
+                    font-size: 0.9rem;
+                }
+
+                @media screen and (max-width: 1150px) {
+                    font-size: 0.85rem;
+                }
+
+                @media screen and (max-width: 1071px) {
+                    font-size: 0.8rem;
+                }
+
+                @media screen and (max-width: 800px) {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+}
+
+
+.lawyers {
+    height: 700px;
+    background-color: rgba(247, 247, 247, 1);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 800px) {
+        height: 90vh;
+      }
+    @media screen and (max-width: 485px) {
+        height: 600px;
+    }
+    @media screen and (max-width: 380px) {
+        height: 535px;
+    }
+
+    .container{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2%;
+        @media screen and (max-width: 1071px) {
+            gap: 5%;
+        }
+      
+        @media screen and (max-width: 800px) {
+            gap: 4%;
+        }
+        @media screen and (max-width: 485px) {
+            height: 90%;
+        }
+        @media screen and (max-width: 380px) {
+            justify-content: center;
+        }                                               
+        .mainText {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;    
+            gap: 15px;
+            @media screen and (max-width: 380px) {
+                gap: 5px;
+            }
+        }
+    span {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    @media screen and (max-width: 380px) {
+        gap: 8px;
+    }
+    
+    h1{
+        font-family: Nunito Sans;
+        font-weight: 800;
+        font-size: 28px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        color: rgba(34, 34, 34, 1);
+
+        @media screen and (max-width: 1071px) {
+            font-size: 24px;
+        }
+      
+        @media screen and (max-width: 800px) {
+            font-size: 20px;
+        }   
+    }
+    div {
+        height: 3px;
+        width: 50px;
+        background-color: rgba(79, 143, 240, 1);
+    }
+    }
+
+    .text {
+        width: 62%;
+        overflow: hidden;
+        text-align: center;
+        font-family: Nunito Sans;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0%;
+        color: rgba(34, 34, 34, 1);
+          @media screen and (max-width: 800px) {
+            font-size: 14px;
+            width: 95%;
+          }
+          @media screen and (max-width: 485px) {
+            height: 65%;
+        }
+        @media screen and (max-width: 380px) {
+            height: 90%;
+        }
+    }
+
+.containerListLawyers{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center ;
+      @media screen and (max-width: 800px) {
+        height: 78%;
+      }
+      @media screen and (max-width: 380px) {
+        height: 70%;
+    }
+    .listLawyers {
+        height: 100%;
+        width: 1300px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        gap:15px;
+        @media screen and (max-width: 1300px) {
+            width: 750px;
+            justify-content: flex-start;
+            overflow-x: scroll;
+          }
+        
+          // Медиазапрос для экранов меньше 800px
+          @media screen and (max-width: 800px) {
+            display: flex;
+            justify-content: flex-start;
+            overflow-x: scroll;
+            width: auto;
+            padding-left: 5%;
+          }
+
+        div {
+            height: 415px;
+            width: 312px;
+            background-color: white;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            @media screen and (max-width: 1071px) {
+                width: 300px;
+                height: 415px;
+              }
+            
+              // Медиазапрос для экранов меньше 800px
+              @media screen and (max-width: 800px) {
+                width: 250px;
+                height: 350px;
+              }
+              @media screen and (max-width: 380px) {
+                height: 360px;
+              }
+
+              .img {
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-x: center;
+                height: 100%;
+                width: 100%;
+                }
+            .lawyer1 {
+                background-image: url('./lawyer1.jpeg');
+            }
+            .lawyer2 {
+                background-image: url('./lawyer2.jpeg');
+            }
+            .lawyer3 {
+                background-image: url('./lawyer3.jpeg');
+            }
+            .lawyer4 {
+                background-image: url('./lawyer4.jpeg');
+            }
+            .text {
+                height: 30%;
+                h1 {
+                    font-family: Nunito Sans;
+                    font-weight: bolder;
+                    font-size: 16px;
+                    line-height: 150%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: rgba(34, 34, 34, 1);
+                }
+                p {
+                    overflow: hidden;
+                    font-family: Nunito Sans;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 120%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: rgba(34, 34, 34, 1);
+                }
+            }
+            .container {
+            height: 90%;
+            width: 90%;
+            display: none;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            .border {
+              display: none;
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              background-color: transparent;
+              border-style: solid;
+              border-color: rgba(79, 143, 240, 1);
+          
+              &:nth-of-type(1) {
+                left: 0;
+                top: 0;
+                border-width: 2px 0 0 2px; /* Верхний и левый бордер */
+              }
+          
+              &:nth-of-type(2) {
+                right: 0;
+                top: 0;
+                border-width: 2px 2px 0 0; /* Верхний и правый бордер */
+              }
+          
+              &:nth-of-type(3) {
+                left: 0;
+                bottom: 0;
+                border-width: 0 0 2px 2px; /* Нижний и левый бордер */
+              }
+          
+              &:nth-of-type(4) {
+                right: 0;
+                bottom: 0;
+                border-width: 0 2px 2px 0; /* Нижний и правый бордер */
+              }
+            }
+
+            .lawyerInfo {
+                height: 80%;
+                width: 100%;
+                display:flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                @media screen and (max-width:380px){
+                    justify-content: center;
+                }
+
+                .fio {
+                    display:flex;
+                    height: 15%;
+                    width: 100%;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 5%;
+                    @media screen and (max-width:1024px){
+                        height: 20%;
+                    }
+                    @media screen and (max-width:800px){
+                        height: 30%;
+                    } 
+                    h1{
+                        font-family: Nunito Sans;
+                        font-weight: 700;
+                        font-size: 15px;
+                        letter-spacing: 0%;
+                        text-align: center;
+                        color: rgba(34, 34, 34, 1);
+                        white-space: nowrap;
+                        @media screen and (max-width:1024px){
+                            font-size: 14px;
+                            white-space: wrap;
+                        }
+                    }
+                    .smallfontsize {
+                        font-size: 14px;
+                    }
+                    p{
+                        font-family: Nunito Sans;
+                        font-weight: 300;
+                        font-size: 14px;
+                        letter-spacing: 0%;
+                        text-align: center;
+                        color: rgba(34, 34, 34, 1);
+                    }
+                }
+                p {
+                    font-family: Nunito Sans;
+                    font-weight: 300;
+                    font-size: 14px;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: rgba(0, 0, 0, 1);
+                    @media screen and (max-width:380px){
+                        display: none;
+                    }
+                }
+                .experience {
+                    font-family: Nunito Sans;
+                    font-weight: 600;
+                    font-size: 16px;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: rgba(34, 34, 34, 1);
+                    @media screen and (max-width:1024px){
+                        font-size: 14px;
+                    }
+                }
+            }
+          }
+
+          &:hover {
+            background-color: white;
+          }
+          &:hover > .container {
+            display: flex;
+          }
+          &:hover > .img,
+          &:hover > .text,
+          &:hover > .text > h1,
+          &:hover > .text > p {
+            display: none;
+          }
+          &:hover > h1,&:hover > p {
+            color: white;
+          }
+          &:hover > .border {
+            display: block;
+        }
+          &:hover > img {
+            filter: invert(1) brightness(100) sepia(1) saturate(100%) hue-rotate(180deg);
+          }
+        }
+        }
+    }
+  } 
+}
+
+.reviews {
+    height: 590px;
+    background-image: url('./mountains.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    background-position-x: center;
+    position: relative;
+    @media screen and (max-width:1024px){
+        height: 567px;
+        background-size: 150%;
+        background-position-y: right;
+    }
+    @media screen and (max-width:800px){
+        height: 579px;
+        background-size: 350%;
+    }
+    @media screen and (max-width:800px){
+        background-size: 450%;
+    }
+
+    .mainContent {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(217, 217, 217, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container {
+            height: 80%;
+            width: 80%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: left;
+            @media screen and (max-width:800px){
+                height: 90%;
+            }
+            @media screen and (max-width:401px){
+                width: 95%;
+            }
+
+            .text {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                span {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: left;
+                    justify-content: space-between;
+                    gap: 10px;
+                    
+                    h1{
+                        font-family: Nunito Sans;
+                        font-weight: 800;
+                        font-size: 28px;
+                        letter-spacing: 0%;
+                        text-transform: uppercase;
+                        color: rgba(34, 34, 34, 1);
+                
+                        @media screen and (max-width: 1071px) {
+                            font-size: 24px;
+                        }
+                      
+                        @media screen and (max-width: 800px) {
+                            font-size: 20px;
+                        }   
+                    }
+                    div {
+                        height: 3px;
+                        width: 50px;
+                        background-color: rgba(79, 143, 240, 1);
+                    }
+                    }
+                    .code {
+                        height: 100%;
+                        width: 20%;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-end;
+                        gap: 15px;
+                        font-size: 30px;
+                        color: rgba(79, 143, 240, 1);
+                        @media screen and (max-width:800px){
+                            display: none;
+                        }
+                        span{
+                            height: 36px;
+                            transform: rotate(30deg);
+                            border:2px solid rgba(79, 143, 240, 1);
+                        }
+                    }
+            }
+            .buttons {
+                height: 15%;
+                display: flex;
+                align-items: flex-end;
+                width: 100%;
+                gap: 24px;
+                
+                @media screen and (max-width: 800px) {
+                    height: 30%;  // Увеличиваем высоту кнопок для экранов до 800px
+                }
+    
+                button {
+                    transition: 0.3s all;
+                    width: 210px;
+                    height: 49px;
+                    background-color: rgba(79, 143, 240, 1);
+                    border: 2px solid rgba(79, 143, 240, 1);
+                    font-family: Nunito Sans;
+                    font-weight: 900;
+                    font-size: 14px;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: white;
+    
+                    &:hover {
+                        color: black;
+                    }
+    
+                    &:nth-of-type(2) {
+                        width: 161px;
+                        height: 49px;
+                        border-width: 2px;
+                        background-color: rgba(230, 230, 230, 1);
+                        border-color: rgba(230, 230, 230, 1);
+                        color: rgba(34, 34, 34, 1);
+                    }
+    
+                    &:hover {
+                        background-color: white;
+                    }
+                }
+    
+                @media screen and (max-width: 800px) {
+                    align-items: center;
+                    justify-content: center;
+                    flex-flow: column nowrap;
+                    gap: 10px;
+                }
+            }
+
+            @media screen and (max-width: 800px) {
+                align-items: center;
+                justify-content: center;
+                flex-flow: column nowrap;
+                gap: 10px;
+            }
+            .reviewsContainer {
+                width: 100%;
+                height: 60%;
+                display: flex;
+                flex-flow: column wrap;
+                gap: 2%;
+                @media screen and (max-width:1440px){
+                    overflow-x: scroll;
+                }
+
+                .reviewCard {
+                    height: 98%;
+                    width: 602px;
+                    background-color: white;
+                    padding: 28px;
+                    box-shadow: 2px 2px 10px 0px rgba(33, 33, 33, 0.15);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5%;
+                    @media screen and (max-width:1024px){
+                        width: 570px;
+                        height: 265px;
+                    }
+                    @media screen and (max-width:800px){
+                        width: 400px;
+                        height: 500px;
+                    }
+
+                    .avatar {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        width: 100%;
+                        column-gap: 5%;
+
+                        img{
+                            width: 50px;
+                            height: 50px;
+                            position: absolute;
+                            right: 0;
+                            @media screen and (max-width:800px){
+                                display: none;
+                            }
+                        }
+                        &-logo {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 100px;
+                            background-image: url('./avatar1.png');
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            @media screen and (max-width:800px){
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+                        .person2 {
+                            background-image: url('./avatar2.png');
+                        }
+                        &-info {
+                            display: flex;
+                            justify-content: center;
+                            align-items: right;
+                            flex-flow: column nowrap;
+                            white-space: nowrap;
+                             h4,p {
+                                margin: 0;
+                                padding: 0;
+                             }
+                             h4 {
+                                font-family: Nunito Sans;
+                                font-weight: 700;
+                                font-size: 20px;
+                                letter-spacing: 0%;
+                                color: rgba(34, 34, 34, 1);
+                                @media screen and (max-width:800px){
+                                    font-size: 18px;
+                                }
+                             } 
+                             p {
+                                font-family: Nunito Sans;
+                                font-weight: 300;
+                                font-size: 14px;
+                                letter-spacing: 0%;
+                                color: rgba(34, 34, 34, 1);
+                             }
+                        }
+                    }
+                    text {
+                        font-family: Nunito Sans;
+                        font-weight: 400;
+                        font-size: 14px;
+                        letter-spacing: 0%;
+                        color: rgba(34, 34, 34, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.posts {
+    height: 915px;
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 1071px) {
+        height: 920px;
+    }
+    @media screen and (max-width: 800px) {
+        height: 850px;
+    }
+    @media screen and (max-width: 485px) {
+        height: 820px;
+    }
+    @media screen and (max-width: 380px) {
+        height: 910px;
+    }
+
+    .container{
+        height: 85%;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2%;
+        @media screen and (max-width: 1071px) {
+            gap: 5%;
+        }
+      
+        @media screen and (max-width: 800px) {
+            gap: 4%;
+        }
+        @media screen and (max-width: 485px) {
+            height: 90%;
+        }
+
+        .mainText {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            @media screen and (max-width: 380px) {
+                gap: 5px;
+            }
+        }
+    span {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    @media screen and (max-width: 380px) {
+        gap: 8px;
+    }
+    
+    h1{
+        font-family: Nunito Sans;
+        font-weight: 800;
+        font-size: 28px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        color: rgba(34, 34, 34, 1);
+
+        @media screen and (max-width: 1071px) {
+            font-size: 24px;
+        }
+      
+        @media screen and (max-width: 800px) {
+            font-size: 20px;
+        }   
+    }
+    div {
+        height: 3px;
+        width: 50px;
+        background-color: rgba(79, 143, 240, 1);
+    }
+    }
+
+    .text {
+        width: 62%;
+        overflow: hidden;
+        text-align: center;
+        font-family: Nunito Sans;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0%;
+        color: rgba(34, 34, 34, 1);
+          @media screen and (max-width: 800px) {
+            font-size: 14px;
+            width: 95%;
+          }
+          @media screen and (max-width: 485px) {
+            height: 65%;
+        }
+        @media screen and (max-width: 380px) {
+            height: 90%;
+        }
+    }
+
+.containerPosts{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center ;
+    @media screen and (max-width: 1071px) {
+        
+      }
+    
+      @media screen and (max-width: 800px) {
+        height: 70%;
+      }
+      @media screen and (max-width: 380px) {
+        height: 60%;
+    }
+    .listPosts {
+        height: 100%;
+        width: 1300px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        gap:15px;
+        @media screen and (max-width: 1071px) {
+
+          }
+        @media screen and (max-width: 1300px) {
+            width: 750px;
+            justify-content: flex-start;
+            overflow-x: scroll;
+          }
+        @media screen and (max-width: 800px) {
+            display: flex;
+            justify-content: flex-start;
+            overflow-x: scroll;
+            width: auto;
+            padding-left: 5%;
+          }
+
+        div {
+            position: relative;
+            height: 480px;
+            width: 420px;
+            background-color: white;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 10px;
+            @media screen and (max-width: 1071px) {
+                width: 340px;
+                height: 520px;
+              }
+            
+              // Медиазапрос для экранов меньше 800px
+              @media screen and (max-width: 800px) {
+                width: 250px;
+                height: 550px;
+              }
+
+              .img {
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-x: center;
+                height: 270px;
+                width: 100%;
+                z-index: 1;
+                }
+            .Post1 {
+                background-image: url('./post1.jpeg');
+            }
+            .Post2 {
+                background-image: url('./post2.jpeg');
+            }
+            .Post3 {
+                background-image: url('./post3.jpeg');
+            }
+
+            .text {
+                height: 40%;
+                @media screen and (max-width: 800px) {
+                    height: 50%;
+                  }
+                h1 {
+                    font-family: Nunito Sans;
+                    font-weight: bolder;
+                    font-size: 16px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                    color: rgba(34, 34, 34, 1);
+                }
+                h6 {
+                    overflow: hidden;
+                    font-family: Nunito Sans;
+                    font-weight: 400;
+                    font-size: 12px;
+                    letter-spacing: 0%;
+                    color: rgba(34, 34, 34, 1);
+                }
+                p{
+                    text-align: start;
+                }
+            }
+            .container {
+            position: absolute;
+            height: 300px;
+            width: 100%;
+            display: none;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            position: relative;
+            background-color: rgba(79, 143, 240, 0.4);
+            z-index: 2;
+
+            img {
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                padding: 5px;
+            }
+            .border {
+              display: block;
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              background-color: transparent;
+              border-style: solid;
+              border-color: white;
+          
+              &:nth-of-type(1) {
+                left: 6%;
+                top: 6%;
+                border-width: 2px 0 0 2px; /* Верхний и левый бордер */
+              }
+          
+              &:nth-of-type(2) {
+                right: 6%;
+                top: 6%;
+                border-width: 2px 2px 0 0; /* Верхний и правый бордер */
+              }
+          
+              &:nth-of-type(3) {
+                left: 6%;
+                bottom: 6%;
+                border-width: 0 0 2px 2px; /* Нижний и левый бордер */
+              }
+          
+              &:nth-of-type(4) {
+                right: 6%;
+                bottom: 6%;
+                border-width: 0 2px 2px 0; /* Нижний и правый бордер */
+              }
+            }
+          }
+
+          &:hover > .img > .container {
+            display: flex;
+          }
+
+          &:hover > .text > h1 {
+            color: rgba(79, 143, 240, 1);
+          }
+        }
+        }
+    }
+    button {
+        transition: 0.3s all;
+        width: 155px;
+        height: 49px;
+        background-color: rgba(79, 143, 240, 1);
+        border: 2px solid rgba(79, 143, 240, 1);
+        font-family: Nunito Sans;
+        font-weight: 900;
+        font-size: 14px;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+
+        &:hover {
+            color: black;
+        }
+
+        &:nth-of-type(2) {
+            width: 161px;
+            height: 49px;
+            border-width: 2px;
+            background-color: rgba(230, 230, 230, 1);
+            border-color: rgba(230, 230, 230, 1);
+            color: rgba(34, 34, 34, 1);
+        }
+        &:hover {
+            background-color: white;
+        }
+    }
+  } 
+}
+
+footer {
+    position: relative;
+    height: 585px;
+    background-color: rgba(34, 34, 34, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width:800px){
+        height: 720px;
+    }
+    @media screen and (max-width:440px){
+        height: 650px;
+        align-items: flex-start;
+    }
+
+    .mainContainer {
+        width: 90%;
+        height: 80%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        @media screen and (max-width:800px){
+            height: 85%;
+            width: 100%;
+        }
+
+        .contacts {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            @media screen and (max-width:800px){
+                flex-flow: column nowrap;
+                justify-content: center;
+                gap: 24px;
+            }
+
+            .contact1 {
+                width: 420px;
+                height: 210px;
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 24px;
+                @media screen and (max-width:440px){
+                    width: 335px;
+                }
+                .avatar {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    width: 100%;
+                    column-gap: 5%;
+
+                    &-logo {
+                        width: 55px;
+                        height: 55px;
+                        background-color: rgba(44, 44, 44, 1);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            height: 50%;
+                            width: 50%;
+                        }
+                        @media screen and (max-width:800px){
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                    &-info {
+                        display: flex;
+                        justify-content: center;
+                        align-items: right;
+                        flex-flow: column nowrap;
+                        white-space: nowrap;
+                         h4,p {
+                            margin: 0;
+                            padding: 0;
+                         }
+                         h4 {
+                            font-family: Nunito Sans;
+                            font-weight: 700;
+                            font-size: 16px;
+                            letter-spacing: 0%;
+                            color: white;
+                            @media screen and (max-width:1024px){
+                                font-size: 14px;
+                            }
+                            @media screen and (max-width:800px){
+                                font-size: 18px;
+                            }
+                         }
+                         .smallfontsize {
+                            font-size: 14px;
+                        } 
+                         p {
+                            font-family: Nunito Sans;
+                            font-weight: 700;
+                            font-size: 12px;
+                            letter-spacing: 0%;
+                            text-transform: uppercase;
+                            color: rgba(140, 140, 140, 1);
+                         }
+                    }
+                }
+            }
+            .contact2 {
+                width: 312px;
+                height: 200px;
+                @media screen and (max-width:1280px){
+                    width: 200px;
+                }
+                @media screen and (max-width:1024px){
+                    display: none;
+                }
+                nav > ul {
+                    list-style-type: none;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 16px;
+
+                    li {
+                        font-family: Nunito Sans;
+                        width: 116px;
+                        font-weight: 700;
+                        font-size: 14px;
+                        letter-spacing: 0%;
+                        text-transform: uppercase;                   
+                        color: white;
+                        @media screen and (max-width:1280px){
+                            text-align: center;
+                        }
+
+                        &:hover{
+                            color: rgba(79, 143, 240, 1);
+                        }
+                    }
+                }
+            }
+            .contact3 { 
+                width: 425px;
+                height: 220px;
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 24px;
+                @media screen and (max-width:876px){
+                    height: 240px;
+                }
+                @media screen and (max-width:440px){
+                    width: 335px;
+                    height: 245px;
+                }
+                button {
+                    transition: 0.3s all;
+                    width: 241px;
+                    height: 49px;
+                    background-color: rgba(79, 143, 240, 1);
+                    border: 2px solid rgba(79, 143, 240, 1);
+                    font-family: Nunito Sans;
+                    font-weight: 900;
+                    font-size: 14px;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: white;
+    
+                    &:hover {
+                        color: black;
+                    }
+    
+                    &:nth-of-type(2) {
+                        width: 161px;
+                        height: 49px;
+                        border-width: 2px;
+                        background-color: rgba(230, 230, 230, 1);
+                        border-color: rgba(230, 230, 230, 1);
+                        color: rgba(34, 34, 34, 1);
+                    }
+    
+                    &:hover {
+                        background-color: white;
+                    }
+                }
+                p {
+                    font-family: Nunito Sans;
+                    font-weight: 400;
+                    font-size: 14px;
+                    letter-spacing: 0%;
+                    color: white;
+                }
+                .avatar {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    width: 100%;
+                    column-gap: 5%;
+
+                    &-logo {
+                        width: 65px;
+                        height: 65px;
+                        border-radius: 100px;
+                        background-image: url('./lawyer2.jpeg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position-x: center;
+
+                        @media screen and (max-width:800px){
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                    &-info {
+                        display: flex;
+                        justify-content: center;
+                        align-items: right;
+                        flex-flow: column nowrap;
+                        white-space: nowrap;
+                         h4,p {
+                            margin: 0;
+                            padding: 0;
+                         }
+                         h4 {
+                            font-family: Nunito Sans;
+                            font-weight: 300;
+                            font-size: 14px;
+                            letter-spacing: 0%;
+                            color: white;
+                         } 
+                         p {
+                            font-family: Nunito Sans;
+                            font-weight: 700;
+                            font-size: 20px;
+                            letter-spacing: 0%;
+                            color: white;
+                         }
+                    }
+                }
+            }
+        }
+
+        .text {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 23%;
+            width: 100%;
+            overflow: hidden; 
+            border-bottom: 1px solid rgba(140, 140, 140, 1);
+            @media screen and (max-width:800px){
+                align-items: center;
+                justify-content: center;
+            } 
+        p {
+            font-family: Nunito Sans;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0%;
+            text-transform: lowercase;
+            color: white;
+            width: 60%;
+            @media screen and (max-width:1024px){
+                display: none;
+            }
+        }
+        .mainText {
+            display:flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: center;
+            width: auto;
+            white-space: nowrap;          
+
+            h1{
+                font-family: Nunito Sans;
+                font-weight: 900;
+                font-size: 28px;
+                letter-spacing: 0%;
+                text-transform: uppercase;                
+                color: rgba(79, 143, 240, 1);
+                white-space: nowrap;
+            }
+            h6{
+                font-family: Nunito Sans;
+                width: 100%;
+                font-weight: 400;
+                font-size: 20px;
+                letter-spacing: 0%;
+                text-align: start;
+                color: rgba(255, 255, 255, 1);
+                overflow: hidden;
+            }
+        }
+    }
+    }
+
+    .content {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        width: 100%;
+        min-height: 50px;
+        background-color: rgba(24, 24, 24, 1);
+        @media screen and (max-width:800px){
+            height: 75px;
+        }   
+
+        .container {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media screen and (max-width:800px){
+                flex-flow: column nowrap;
+                justify-content: center;
+                gap: 6px;
+            }
+            @media screen and (max-width:415px){
+                width: 85%;
+            }
+
+            h1 {
+                font-family: Nunito Sans;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 0%;
+                color: white;
+                white-space: nowrap;
+            }
+        }
+    }
+}
